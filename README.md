@@ -2,54 +2,85 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# ElderCare+ 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: code catalyst
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: SHYNI N - JYOTHI ENGINEERING COLLEGE
+- Member 2: SIMI K R - JYOTHI ENGINEERING COLLEGE
 
 ### Hosted Project Link
-[mention your project hosted link here]
+https://elderly-people-code-catalyst.netlify.app/
 
 ### Project Description
-[2-3 lines about what your project does]
+ElderMate – The Care Home is an elderly-friendly healthcare web application designed to assist senior citizens in managing their daily medications, doctor appointments, and medical records efficiently. The platform provides smart medicine reminders with voice alerts, report generation, doctor contact management, and appointment tracking through a simple and accessible interface.
+The system focuses on usability, accessibility, and healthcare discipline to support independent and stress-free living for elderly individuals.
 
 ### The Problem statement
-[What problem are you solving?]
+Many elderly individuals face difficulties in managing their daily medications and medical schedules due to memory-related challenges, complex prescription routines, and lack of organized health tracking systems.
+Common problems include:
+Missing or delaying medicine doses
+Forgetting doctor appointments
+Difficulty maintaining medical records
+Lack of quick access to doctor contact details
+Limited digital platforms designed specifically for elderly usability
+These issues can lead to serious health complications and reduced treatment effectiveness.
 
 ### The Solution
-[How are you solving it?]
+ElderMate provides a comprehensive and user-friendly digital solution to address these challenges.
+The system offers:
+Smart voice-based medicine reminders with both english and malayalam voice assistance and notification settings in both language later on we can add notification and voice assistance in all languages across the world
+enter and manage prescribed medicine details, including name, dosage, timing
+Ai recommented tips
+shows history
+Provides a clear daily overview of all medicines, appointments, and lab-related activities
+health report generation
+Doctor contact storage with quick-access functionality
+Appointment date scheduling 
+availability of calender
+Large fonts and simple interface designed specifically for elderly users
+upload appointment related files
+record and maintain lab test information such as test name
+logout window
+By integrating these features into a single platform, ElderMate improves medication adherence, enhances medical organization, and promotes independent healthcare management for senior citizens.
+
 
 ---
 
 ## Technical Details
 
 ### Technologies/Components Used
+-Languages Used: HTML, CSS, JavaScript
 
-**For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+-Frameworks Used: None 
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+-Libraries Used: Web Speech API, Browser Notifications API
+
+-Tools Used: Visual Studio Code (VS Code), Live Server Extension, Web Browser (Chrome/Edge)
+
+For Hardware
+-Main Components: Desktop/Laptop Computer or Smartphone, Internet Connection
+
+-Specifications: Minimum 4GB RAM, Modern Web Browser (Chrome, Edge, or Firefox), Basic Audio Support for Voice Reminders
+
+-Tools Required: Computer System, Keyboard, Mouse, Stable Internet Connection
 
 ---
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+
+- Feature 1: Medicine Management
+
+-Feature 2: remainder notification
+
+-Feature 3: AI tips
+
+-Feature 4: Appointment & Doctor Management
 
 ---
 
@@ -59,12 +90,23 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+[# Clone the repository
+git clone https://github.com/your-username/eldermate.git
+
+# Navigate into the project folder
+cd eldermate
+
+# (Optional) If using Live Server extension, install it in VS Code]
 ```
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
+[# Open index.html using Live Server in VS Code
+
+# OR open directly in browser
+start index.html      # Windows
+open index.html       # macOS
+]
 ```
 
 ### For Hardware:
@@ -83,25 +125,30 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+THE FRONT- the login window
+<img width="1902" height="1017" alt="Screenshot 2026-02-14 081806" src="https://github.com/user-attachments/assets/e1845fd2-04b2-4d0f-9718-01b92213720b" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+THE DASHBOARD- with Smart voice-based medicine reminders with both english and malayalam voice assistance and notification settings in both language later on we can add notification and voice assistance in all languages across the world
+
+<img width="1895" height="1015" alt="Screenshot 2026-02-14 081927" src="https://github.com/user-attachments/assets/10ea62cb-6276-4e75-a0a5-79c71ee3f50d" />
+
+
+ADD MEDICINE COLUMN
+<img width="1891" height="1017" alt="Screenshot 2026-02-14 082034" src="https://github.com/user-attachments/assets/24350a88-9957-4482-aa31-050828c3d6b6" />
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
+![<img width="1024" height="1536" alt="architecture" src="https://github.com/user-attachments/assets/b038200a-0af9-4b3a-b5ad-744fba9cbf5f" />]
+
 *Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
+![<img width="1024" height="1536" alt="workflow" src="https://github.com/user-attachments/assets/507330e2-f265-495e-9928-1b0c6aff57c9" />
+]
 *Add caption explaining your workflow*
 
 ---
@@ -305,24 +352,21 @@ python script.py -c config.json --verbose input.txt
 
 **Input:**
 ```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
+Medicine Name: Paracetamol
+Dosage: 500mg
+Time: 08:00 AM
+Upload Image: paracetamol.jpg
 ```
 
-**Command:**
-```bash
-python script.py sample.txt
-```
 
-**Output:**
+**Output:
 ```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
+Medicine saved successfully
+Entry displayed in Today’s Schedule
+Reminder scheduled for 08:00 AM
+Voice alert triggered at scheduled time
 ```
+P
 
 **Example 2: Advanced Usage**
 
@@ -361,12 +405,11 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+[https://drive.usercontent.google.com/download?id=1GcPQQKlgmIEHmaM-JxoPujtf4_NMTpGb&export=download&authuser=0&confirm=t&uuid=9ea4a317-07c4-43ce-af87-eb40712dbe3a&at=APcXIO03-NLEgkwj8Y6dq45KJOcI:1771041894917 ]
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
 
 ### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+[https://drive.usercontent.google.com/download?id=1L9Y_2hM1Cb09EaO9vz4fy2XBMPKzBVEW&export=download&authuser=0&confirm=t&uuid=2ac56b32-dd5b-4a8b-b0b2-457154f651ab&at=APcXIO0o3fEWcFEnS2Yuh7clYlZn:1771041985592]
 
 ---
 
@@ -374,25 +417,55 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:** [e.g.,Copilot, ChatGPT]
 
 **Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+Generated frontend structure (HTML, CSS, JavaScript)
+
+Created elderly-friendly UI layout and styling
+
+Implemented medicine reminder logic and alarm feature
+
+Added Malayalam voice reminder functionality
+
+Debugging assistance for layout, navigation, and script issues
+
+Feature enhancement suggestions (medicine image upload, snooze button, notification system)
+
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+Create an elderly-friendly medicine reminder website"
 
-**Percentage of AI-generated code:** [Approximately X%]
+"Add alarm setup with Malayalam voice reminder"
+
+"Implement snooze button (5 minutes later)"
+
+"Add medicine image upload feature in medicine tab"
+
+"Fix sidebar alignment issue"
+
+"Make header row-wise instead of column layout"
+
+"Send full index.html, style.css, script.js code"
+
+
+
+**Percentage of AI-generated code:** [65–75%]
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
+Project idea and concept (ElderMate – Elderly Care Home Assistant)
+
+Feature selection and customization decisions
+
+UI/UX preference decisions (colors, layout, elderly-friendly design)
+
+Manual testing and debugging in VS Code / Cursor
+
+File organization and project execution
+
+Final modifications and improvements
+
+
 
 *Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
 
@@ -400,21 +473,25 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- [SIMI KR]: [Frontend development (HTML, CSS styling),UI design improvements for elderly-friendly layout,Responsive design implementation,Testing and layout debugging]
+- [SHYNI N]: [Project concept and planning (ElderMate – Elderly Care Assistant),JavaScript logic implementation (medicine reminder & alarm system),Malayalam voice reminder integration,Medicine image upload feature,Feature enhancement decisions and final integration.]
+
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-**Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+Why MIT License?
 
+✅ Simple and permissive
+
+✅ Allows modification and reuse
+
+✅ Suitable for student projects & hackathons
+
+✅ No strict redistribution requirements
 ---
 
 Made with ❤️ at TinkerHub
