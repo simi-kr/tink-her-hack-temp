@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta chaArset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElderCare Reminder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Landing + Login Page -->
+<div id="landingPage" class="landing">
+    <div class="landing-box">
+        <h1>ElderCare+</h1>
+        <p>Your Trusted Medicine Reminder Companion</p>
+
+        <div class="login-box">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+</div>
+
+<!-- Main Website -->
+<div id="mainPage" class="hidden">
+
+    <div class="sidebar">
+        <h2>ElderCare+</h2>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('addMedicine')">Add Medicine</button>
+        <button onclick="showSection('schedule')">Today's Schedule</button>
+        <button onclick="showSection('history')">History</button>
+        <button onclick="showSection('doctor')">Doctor Contact</button>
+        <button onclick="showSection('appointment')">Appointment</button>
+        <button onclick="showSection('calendar')">Calendar View</button>
+        <button onclick="showSection('lab')">Lab Test</button>
+        <button onclick="showSection('reports')">Reports</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="content">
+
+        <div id="dashboard" class="section active">
+           <h2>Welcome <span id="displayUser"></span></h2>
+           <p>Total Medicines: <span id="totalMed"></span></p>
+
+           <h3>Alarm Settings</h3>
+
+          <select id="voiceSelect"></select>
+
+          <select id="languageSelect">
+              <option value="english">English</option>
+              <option value="malayalam">Malayalam</option>
+          </select>
+
+           <label>
+           <input type="checkbox" id="soundToggle">
+                Use Alarm Sound Instead of Voice
+           </label>
+
+              <div id="aiHealthTips" style="margin-top:2em; padding:1em; border:1px solid #b3e5fc; background:#e1f5fe; border-radius:8px; color:#000;">
+                  <h3>🤖 AI Health Tips</h3>
+                  <ul id="healthTipsList">
+                      <li>Stay hydrated by drinking enough water daily.</li>
+                      <li>Take your medicines on time for best results.</li>
+                      <li>Maintain a balanced diet rich in fruits and vegetables.</li>
+                      <li>Engage in light physical activity as recommended by your doctor.</li>
+                      <li>Keep regular contact with your healthcare provider.</li>
+                  </ul>
+                  <button onclick="generateHealthTip()">Get New Tip</button>
+              </div>
+    </div>
+
+
+        <div id="addMedicine" class="section">
+            <h2>Add Medicine</h2>
+            <input type="text" id="medName" placeholder="Medicine Name">
+            <input type="time" id="medTime">
+            <button onclick="addMedicine()">Add</button>
+        </div>
+
+        <div id="schedule" class="section">
+              <h2>Today's Schedule</h2>
+              <ul id="scheduleList"></ul>
+              <p id="noScheduleMsg" style="display:none;color:#b3e5fc;">No medicines scheduled for today.</p>
+        </div>
+
+        <div id="history" class="section">
+              <h2>History</h2>
+              <ul id="historyList"></ul>
+              <p id="noHistoryMsg" style="display:none;color:#b3e5fc;">No history available.</p>
+        </div>
+
+        <div id="doctor" class="section">
+            <h2>Doctor Contact</h2>
+            <input type="text" id="docName" placeholder="Doctor Name">
+            <input type="text" id="docPhone" placeholder="Phone Number">
+            <button onclick="addDoctor()">Add</button>
+            <ul id="doctorList"></ul>
+        </div>
+
+        <div id="appointment" class="section">
+            <h2>Appointment</h2>
+            <input type="date" id="appointDate">
+            <input type="file" id="appointImage">
+            <button onclick="saveAppointment()">Save</button>
+            <div id="appointmentList"></div>
+        </div>
+
+        <div id="calendar" class="section">
+            <h2>Calendar View</h2>
+            <input type="date" id="calendarView">
+        </div>
+
+        <div id="lab" class="section">
+            <h2>Lab Test</h2>
+            <input type="text" id="labTest" placeholder="Test Name">
+            <button onclick="addLab()">Add</button>
+            <ul id="labList"></ul>
+        </div>
+
+        <div id="reports" class="section">
+              <h2>Reports</h2>
+              <div id="reportContent"></div>
+              <button onclick="generateReport()">Generate Report</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Chatbox (visible on main page only) -->
+<div id="chatbox" class="chatbox-container hidden">
+    <div class="chatbox-header">
+        <span>💬 Support Chat</span>
+        <button class="chatbox-close" onclick="toggleChatbox()" aria-label="Close chat">×</button>
+    </div>
+    <div class="chatbox-messages" id="chatMessages">
+        <div class="chat-msg bot">
+            <p>Hi! How can I help you today? Ask about your medicines, reminders, or anything else.</p>
+        </div>
+    </div>
+    <div class="chatbox-input">
+        <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+        <button onclick="sendChatMessage()">Send</button>
+    </div>
+</div>
+<button id="chatToggle" class="chatbox-toggle hidden" onclick="toggleChatbox()" aria-label="Open chat">💬</button>
+
+<script src="script.js"></script>
+</body>
+</html>
