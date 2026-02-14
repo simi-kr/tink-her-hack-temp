@@ -405,11 +405,11 @@ python script.py -v --format json data.json
 ## Project Demo
 
 ### Video
-[https://drive.usercontent.google.com/download?id=1GcPQQKlgmIEHmaM-JxoPujtf4_NMTpGb&export=download&authuser=0&confirm=t&uuid=9ea4a317-07c4-43ce-af87-eb40712dbe3a&at=APcXIO03-NLEgkwj8Y6dq45KJOcI:1771041894917 ]
+https://drive.google.com/file/d/1GcPQQKlgmIEHmaM-JxoPujtf4_NMTpGb/view?usp=drive_link
 
 
 ### Additional Demos
-[https://drive.usercontent.google.com/download?id=1L9Y_2hM1Cb09EaO9vz4fy2XBMPKzBVEW&export=download&authuser=0&confirm=t&uuid=2ac56b32-dd5b-4a8b-b0b2-457154f651ab&at=APcXIO0o3fEWcFEnS2Yuh7clYlZn:1771041985592]
+https://drive.google.com/file/d/1L9Y_2hM1Cb09EaO9vz4fy2XBMPKzBVEW/view?usp=drive_link
 
 ---
 
